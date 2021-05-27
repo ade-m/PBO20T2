@@ -18,5 +18,9 @@ public class Bank {
         this.saldo-=uang;
     }
 
+    public String tampilSaldoIDR(){
+        return "IDR. " + saldo;
+    }
+
 
 }
