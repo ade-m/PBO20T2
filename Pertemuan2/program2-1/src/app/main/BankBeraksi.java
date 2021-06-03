@@ -6,7 +6,8 @@ public class BankBeraksi {
     public static void main(String[] args){
         float ratebunga = (float)272/100;
         ratebunga = Math.round(ratebunga);
-        int bungatabungan;  //ratebunga * saldo akhir
+        int bungatabungan;  //ratebunga * saldo ankhir
+        char yn ='n';
         Bank myBank = new Bank(10000000);
         int uangSimpan,uangAmbil;
 
@@ -14,21 +15,29 @@ public class BankBeraksi {
 
         System.out.println("Saldo Awal : "+ myBank.tampilSaldoIDR() + "\n");
 
+        do{
 
-        System.out.print("Masukkan Jumlah uang yang akan disimpan  : ");
-        uangSimpan = masukan.nextInt();
-        myBank.simpanUang(uangSimpan);
-        System.out.println("Simpan Uang  \tIDR. "+uangSimpan);
-        System.out.println("Saldo saat ini : "+  myBank.tampilSaldoIDR()  + "\n");
+            System.out.print("Masukkan Jumlah uang yang akan disimpan  : ");
+            uangSimpan = masukan.nextInt();
+            myBank.simpanUang(uangSimpan);
+            System.out.println("Simpan Uang  \tIDR. "+uangSimpan);
+            System.out.println("Saldo saat ini : "+  myBank.tampilSaldoIDR()  + "\n");
 
 
 
-        System.out.print("Masukkan Jumlah uang yang akan diambil  : ");
-        uangAmbil = masukan.nextInt();
-        myBank.ambilUang(uangAmbil);
-        System.out.println("Ambil UAng  \t IDR."+uangAmbil);
-        System.out.println("Saldo saat ini : "+  myBank.tampilSaldoIDR()  + "\n");
+            System.out.print("Masukkan Jumlah uang yang akan diambil  : ");
+            uangAmbil = masukan.nextInt();
+            myBank.ambilUang(uangAmbil);
+            System.out.println("Ambil UAng  \t IDR."+uangAmbil);
+            System.out.println("Saldo saat ini : "+  myBank.tampilSaldoIDR()  + "\n");
 
+            System.out.print("Lanjutkan transaksi (y/n)  : ");
+            masukan.nextLine();
+            String yesno = masukan.nextLine();
+            yn = yesno.charAt(0);
+        }while(yn=='y' || yn=='Y');
+
+        masukan.close();
         // bungatabungan = (int) (ratebunga * myBank.saldo);
         // int bungatabunganinc ;
         // bungatabunganinc = ++bungatabungan;
