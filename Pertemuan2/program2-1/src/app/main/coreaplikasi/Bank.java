@@ -1,8 +1,8 @@
-package app.main;
+package app.main.coreaplikasi;
 
 public class Bank {
     public int saldo;
-
+    
     public Bank() {
     }
 
@@ -22,5 +22,10 @@ public class Bank {
         return "IDR. " + saldo;
     }
 
+    public static void cetakSelamatPagi(){
+        System.out.println("Selamat pagi");
+    }
+
 
 }
+

@@ -1,4 +1,4 @@
-package app.main;
+package app.main.coreaplikasi;
 import java.lang.Math;
 import java.util.Scanner;
 
@@ -10,7 +10,8 @@ public class BankBeraksi {
         char yn ='n';
         Bank myBank = new Bank(10000000);
         int uangSimpan,uangAmbil;
-
+        Bank.cetakSelamatPagi();
+        Bank.hutang=100;
         Scanner masukan = new Scanner(System.in);
 
         System.out.println("Saldo Awal : "+ myBank.tampilSaldoIDR() + "\n");
