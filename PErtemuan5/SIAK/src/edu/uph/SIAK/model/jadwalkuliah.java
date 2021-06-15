@@ -6,6 +6,7 @@ public class jadwalkuliah {
     ArrayList<mahasiswa> Mahasiswa = new ArrayList<mahasiswa>();
     dosen Dosen;
     matakuliah Matakuliah;
+    //ruangan
 
 
     public jadwalkuliah() {
