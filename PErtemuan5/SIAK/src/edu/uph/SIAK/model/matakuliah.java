@@ -1,6 +1,6 @@
 package edu.uph.SIAK.model;
 
-public class mahasiswa {
+public class matakuliah {
     /* Nama Mahaiswa */
     String nama;
     /* Nomor induk mahasiswa */    
@@ -8,10 +8,10 @@ public class mahasiswa {
     /* Jen is Kelamin jika 1 Wawnita, 0 Pria */
     boolean jenisKelamin;
     
-    public mahasiswa() {
+    public matakuliah() {
     }
 
-    public mahasiswa(String nama, String studentID, boolean jenisKelamin) {
+    public matakuliah(String nama, String studentID, boolean jenisKelamin) {
         this.nama=nama;
         this.studentID = studentID;
         this.jenisKelamin = jenisKelamin;
