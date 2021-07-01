@@ -1,12 +1,16 @@
 import java.util.Scanner;
 public class App {
+    /*
+        Nama : Ricky
+        Studentid : 09121212
+    */
     public static void main(String[] args) throws Exception {
        String kata ="UPHMEDAN20TI2";
        int n=5;
        String yn="y";
 
        Scanner masukan = new Scanner(System.in);
-       
+
        do{
        
         System.out.print("Input N :");

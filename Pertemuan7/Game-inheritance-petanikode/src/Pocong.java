@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Pocong extends Enemy{
+public class Pocong  extends Enemy{
     public Pocong(String nama) {
         super(nama,10,3);
     }
@@ -8,7 +8,6 @@ public class Pocong extends Enemy{
     void lompat(){
         System.out.println("Pocong Lompat");
     }
-
 
     @Override
     void attack(){
@@ -34,9 +33,22 @@ public class Pocong extends Enemy{
             return true;
         }
     }
-
-
-    void serangTeman(Zombie x){
+        /*implementasi method pada interface Playcontroller*/
+        public void onKeyUpPress(){
+      
+        }
+        public void onKeyDownPress(){
+          
+        }
+        public void onKeyR1Press(){
+         
+        }
+        public void onKeyR2Press(){
+          
+        }
+    
+        /*end implementasi method pada interface Playcontroller*/
+    void serangTeman(Enemy x){
         if(attacks())  x.hp= x.hp-this.attackPoin;
     }
 
@@ -53,5 +65,13 @@ public class Pocong extends Enemy{
             if(attacks())  enemy.hp= enemy.hp-this.attackPoin;
        }
     }
+
+    @Override
+    public  void specialAttack(){
+        System.out.println("Special Attack");
+
+    }
+
+
 
 }

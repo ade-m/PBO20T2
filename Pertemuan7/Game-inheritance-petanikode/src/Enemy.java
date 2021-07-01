@@ -1,4 +1,4 @@
-public class Enemy {
+public abstract class Enemy implements PlayController{
     String name;
     int hp;
     int attackPoin;
@@ -15,7 +15,6 @@ public class Enemy {
         System.out.println("Musuh Menyerang");
     }
     
-
     void cekStatus(){
         System.out.println("\nNama\t:\t" + name 
                         +   "\nHP\t:\t" + hp
@@ -25,6 +24,8 @@ public class Enemy {
     void isiEnenrgi(){
         this.energi=100;
     }
+
+    public abstract void specialAttack();
 
 
 }
