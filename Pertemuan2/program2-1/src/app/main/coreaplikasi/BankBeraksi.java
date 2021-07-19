@@ -5,26 +5,24 @@ import java.util.Scanner;
 public class BankBeraksi {
     public static void main(String[] args){
         float ratebunga = (float)272/100;
+        
         ratebunga = Math.round(ratebunga);
         int bungatabungan;  //ratebunga * saldo ankhir
         char yn ='n';
         Bank myBank = new Bank(10000000);
-        int uangSimpan,uangAmbil;
+        int uangSimpan,uangAmbil; 
         Bank.cetakSelamatPagi();
-        Bank.hutang=100;
+        //Bank.hutang=100;
         Scanner masukan = new Scanner(System.in);
 
         System.out.println("Saldo Awal : "+ myBank.tampilSaldoIDR() + "\n");
 
         do{
-
             System.out.print("Masukkan Jumlah uang yang akan disimpan  : ");
             uangSimpan = masukan.nextInt();
             myBank.simpanUang(uangSimpan);
             System.out.println("Simpan Uang  \tIDR. "+uangSimpan);
             System.out.println("Saldo saat ini : "+  myBank.tampilSaldoIDR()  + "\n");
-
-
 
             System.out.print("Masukkan Jumlah uang yang akan diambil  : ");
             uangAmbil = masukan.nextInt();
